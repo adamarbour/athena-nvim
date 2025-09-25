@@ -24,6 +24,7 @@ let
 		startupPlugins = with pkgs.vimPlugins; {
       general = [
       		lazy-nvim
+      		mini-base16	# Stylix support
       ];
     };
 	
@@ -106,4 +107,5 @@ let
 	};
 	
 	defaultPackageName = "nvim";
+	
 in utils.baseBuilder luaPath { inherit nixpkgs; } categoryDefinitions packageDefinitions defaultPackageName
