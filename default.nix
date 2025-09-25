@@ -60,10 +60,7 @@ let
         suffix-path = true;
         suffix-LD = true;
         wrapRc = true;
-        # IMPORTANT:
-        # your aliases may not conflict with your other packages.
         aliases = [ "vim" ];
-        # neovim-unwrapped = inputs.neovim-nightly-overlay.packages.${pkgs.system}.neovim;
       };
       # and a set of categories that you want
       categories = {
