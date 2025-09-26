@@ -24,7 +24,11 @@ let
 		startupPlugins = with pkgs.vimPlugins; {
       general = [
       		lazy-nvim
-      		mini-base16	# Stylix support
+      		mini-base16		# for Stylix support
+      		plenary-nvim
+      		telescope-nvim
+      		telescope-fzf-native-nvim
+        telescope-ui-select-nvim
       ];
     };
 	
@@ -45,7 +49,12 @@ let
 			# These are appended to the PATH (by default) while within
 			# the Neovim program, including the Neovim terminal. 
 		lspsAndRuntimeDeps = with pkgs; {
-      general = [ ];
+      general = [
+      		fd
+    			lua-language-server
+    			nixd
+    			ripgrep
+      ];
     };
 		
 		#<sharedLibraries>
